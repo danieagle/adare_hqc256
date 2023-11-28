@@ -1,0 +1,17 @@
+name = "adare_hqc256_example"
+description = "Adare HQC256 example. need Ada2022. :-)"
+version = "0.1.0-dev"
+
+authors = ["Daniel Norte de Moraes"]
+maintainers = ["Daniel Norte de Moraes <danieagle@tutanota.com>"]
+maintainers-logins = ["danieagle"]
+
+executables = ["adare_hqc256_example"]
+[[depends-on]]
+adare_hqc256 = "~0.1.0-dev"
+[[pins]]
+adare_hqc256 = { path='../adare_hqc256' }
+
+[build-switches]
+"*".Ada_Version = "Ada2022"
+"*".Style_checks = ["-gnaty2abCefhiklnprstmM135"]

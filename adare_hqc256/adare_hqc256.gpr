@@ -1,0 +1,45 @@
+with "./config/adare_hqc256_config.gpr";
+library project Adare_Hqc256 is
+
+  for Languages use ("Ada", "C");
+
+  for Object_Dir use "obj/" & Adare_Hqc256_Config.Build_Profile;
+
+  for Source_Dirs use ("config", "src", "src/c/common", "src/c/clean",
+    "src/" & adare_hqc256_config.Alire_Host_OS & "/");
+
+  for Library_Dir use "lib";
+  for Library_Name use "adare_hqc256";
+
+  for Library_Version use Project'Library_Name & ".so." & Adare_Hqc256_Config.Crate_Version;
+
+  for Library_Kind use "dynamic";
+
+  for Create_Missing_Dirs use "True";
+
+  package Compiler is
+    for Default_Switches ("Ada") use Adare_Hqc256_Config.Ada_Compiler_Switches;
+
+    case adare_hqc256_config.Build_Profile is
+
+         when "validation" | "development" =>
+            for Default_Switches ("C") use ("-std=c99", "-Og", "-g3", "-Wall", "-Wextra",
+              "-Wpedantic", "-Wshadow", "-Wvla", "-Werror", "-Wredundant-decls", "-Wmissing-prototypes");
+
+         when "release" =>
+            for Default_Switches ("C") use ("-std=c99", "-O3", "-Wall", "-Wextra",
+              "-Wpedantic", "-Wshadow", "-Wvla", "-Werror", "-Wredundant-decls", "-Wmissing-prototypes");
+
+      end case;
+
+  end Compiler;
+
+  package Binder is
+    for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+  end Binder;
+
+  package Install is
+    for Artifacts (".") use ("share");
+  end Install;
+
+end Adare_Hqc256;

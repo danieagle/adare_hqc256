@@ -1,0 +1,4 @@
+v.latest =>
+
+1) Ubuntu 23.10 Linux AMD64 + gnat 13.2 + gcc 13.2 + gprbuild 2021
+

@@ -1,0 +1,32 @@
+{
+	"folders": [
+    {
+      "name": "adare_hqc256",
+      "path": "adare_hqc256"
+    },
+    {
+      "name": "adare_hqc256_example",
+      "path": "adare_hqc256_example"
+    },
+    {
+      "name": "Doc",
+      "path": "Doc"
+    },
+    {
+      "path": "."
+    },
+    {
+      "path": "../../../bitbucket.org/kyber-ada-1024/example"
+    }
+  ],
+	"extensions": {
+		"recommendations": [
+			"AdaCore.ada"
+		]
+	},
+	"settings": {
+		"editor.formatOnType": true,
+		"editor.formatOnPaste": true,
+		"cmake.configureOnOpen": false,
+	}
+}
