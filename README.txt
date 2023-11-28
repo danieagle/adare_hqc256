@@ -2,7 +2,7 @@
 Adare_HQC256
 =====================
 
-Version: 0.1.0-dev
+Version: 0.1.1-dev
 
 HQC (Hamming Quasi-Cyclic) is a code-based public key encryption scheme designed to
 provide security against attacks by both classical and quantum computers. HQC has

@@ -1,6 +1,6 @@
 name = "adare_hqc256"
 description = "Post Quantum Computer Resistant Cryptograph KEM, HQC 256 Ada bind."
-version = "0.1.0-dev"
+version = "0.1.1-dev"
 
 authors = ["Daniel Norte de Moraes"]
 maintainers = ["Daniel Norte de Moraes <danieagle@tutanota.com>"]
