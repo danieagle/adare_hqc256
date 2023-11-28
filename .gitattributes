@@ -1,2 +1,1 @@
-*.ada linguist-detectable=true
-*.c linguist-detectable=false
+adare_hqc256/src/c/* linguist-vendored
