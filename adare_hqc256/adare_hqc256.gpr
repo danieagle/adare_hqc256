@@ -1,4 +1,4 @@
-with "./config/adare_hqc256_config.gpr";
+with "config/adare_hqc256_config.gpr";
 library project Adare_Hqc256 is
 
   for Languages use ("Ada", "C");
