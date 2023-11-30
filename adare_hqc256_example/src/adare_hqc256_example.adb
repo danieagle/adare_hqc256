@@ -23,25 +23,30 @@ procedure Adare_Hqc256_Example is
 
   use all type hqc.hqc_shared_key;
 begin
+
   hqc.hqc_256_kem_keypair (public_key1, secret_key1);
 
   Text_IO.New_Line;
 
-  Text_IO.Put_Line (" Public Key1" & public_key1'Image);
+  Text_IO.Put_Line (" Public Key1" &
+    Interfaces.C.To_Ada (hqc.get_hqc_public_key (public_key1), False));
 
   Text_IO.New_Line;
 
-  Text_IO.Put_Line (" Secret Key1" & secret_key1'Image);
+  Text_IO.Put_Line (" Secret Key1" &
+    Interfaces.C.To_Ada (hqc.get_hqc_private_key (secret_key1), False));
 
   hqc.hqc_256_kem_encode (ciphertext1, shared_secret1, public_key1);
 
   Text_IO.New_Line;
 
-  Text_IO.Put_Line (" Shared_Secret1" & shared_secret1'Image);
+  Text_IO.Put_Line (" Shared_Secret1" &
+    Interfaces.C.To_Ada (hqc.get_hqc_shared_key (shared_secret1), False));
 
   Text_IO.New_Line;
 
-  Text_IO.Put_Line (" CipherText1" & ciphertext1'Image);
+  Text_IO.Put_Line (" CipherText1" &
+     Interfaces.C.To_Ada (hqc.get_hqc_ciphertext (ciphertext1), False));
 
   ciphertext2 := ciphertext1; -- just for backup or maybe offload
 
@@ -49,7 +54,8 @@ begin
 
   Text_IO.New_Line;
 
-  Text_IO.Put_Line (" Shared_Secret2" & shared_secret2'Image);
+  Text_IO.Put_Line (" Shared_Secret2" &
+    Interfaces.C.To_Ada (hqc.get_hqc_shared_key (shared_secret2), False));
 
   Text_IO.New_Line;
 
@@ -71,19 +77,19 @@ begin
     hqc.get_hqc_ciphertext (ciphertext1);
   begin
 
-    Text_IO.Put_Line (" sk1 =>  " & sk1'Image);
+    Text_IO.Put_Line (" sk1 =>  " & Interfaces.C.To_Ada (sk1, False));
 
     Text_IO.New_Line;
 
-    Text_IO.Put_Line (" pk =>  " & pk1'Image);
+    Text_IO.Put_Line (" pk =>  " & Interfaces.C.To_Ada (pk1, False));
 
     Text_IO.New_Line;
 
-    Text_IO.Put_Line ("  =>  " & ss2'Image);
+    Text_IO.Put_Line ("  =>  " & Interfaces.C.To_Ada (ss2, False));
 
     Text_IO.New_Line;
 
-    Text_IO.Put_Line ("  =>  " & ct1'Image);
+    Text_IO.Put_Line ("  =>  " & Interfaces.C.To_Ada (ct1, False));
 
     Text_IO.New_Line (2);
 

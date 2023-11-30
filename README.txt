@@ -20,7 +20,7 @@ USAGE
    Building before publishing in Public Alire Arquive:
 
       git clone https://github.com/danieagle/adare_hqc256
-      cd adare_hqc256
+      cd adare_hqc256/adare_hqc256
       alr build --release
 
    And Be Happy :-D
