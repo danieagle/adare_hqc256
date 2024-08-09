@@ -1,9 +1,9 @@
 name = "adare_hqc256"
 description = "Post Quantum Computer Resistant Cryptograph KEM, HQC 256 Ada bind."
-version = "0.1.1-dev"
+version = "0.2.1"
 
 authors = ["Daniel Norte de Moraes"]
-maintainers = ["Daniel Norte de Moraes <danieagle@tutanota.com>"]
+maintainers = ["Daniel Norte de Moraes <danieagle@zohomail.com>"]
 maintainers-logins = ["danieagle"]
 
 long-description = """
@@ -19,6 +19,10 @@ HQC (Hamming Quasi-Cyclic) is a code-based public key encryption scheme
       How a Bonus all Ada packages in this lib is "Ada Pure"! :-)
 
                    """
+
+licenses = "Unlicense"
+tags = ["kem", "pqc", "ss512bits"]
+website = ""
 
 [build-switches]
 "*".Ada_Version = "Ada12"
