@@ -17,10 +17,10 @@ How a Bonus all Ada packages in this lib is "Ada Pure"! :-)
 USAGE
 -----
 
-   Building before publishing in Public Alire Arquive:
+   Building:
 
     1) enter in your alire project:
-    2) alr with adare_net --use https://github.com/danieagle/adare_hqc256.git
+    2) alr with adare_net
 
     3.1) mybe use: alr build --release
       or
