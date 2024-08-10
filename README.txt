@@ -2,7 +2,7 @@
 Adare_HQC256
 =====================
 
-Version: 0.2.1
+Version: 0.2.3
 
 HQC (Hamming Quasi-Cyclic) is a code-based public key encryption scheme designed to
 provide security against attacks by both classical and quantum computers. HQC has
@@ -20,7 +20,7 @@ USAGE
    Building:
 
     1) enter in your alire project:
-    2) alr with adare_net
+    2) alr with adare_hqc256
 
     3.1) mybe use: alr build --release
       or

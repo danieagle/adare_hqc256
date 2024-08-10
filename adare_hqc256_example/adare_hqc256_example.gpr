@@ -1,7 +1,7 @@
 with "config/adare_hqc256_example_config.gpr";
 project Adare_Hqc256_Example is
 
-   for Source_Dirs use ("src/", "config/");
+   for Source_Dirs use ("src/");
    for Object_Dir use "obj/" & Adare_Hqc256_Example_Config.Build_Profile;
    for Create_Missing_Dirs use "True";
    for Exec_Dir use "bin";
